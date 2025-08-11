@@ -1,4 +1,4 @@
-export const products = [
+export const productsCards = [
 	{
 		name: 'Lorem ipsum dolor',
 		description:

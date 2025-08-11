@@ -1,16 +1,23 @@
 import { v4 as uuidv4 } from 'uuid';
-import { products } from '../../data';
+import { productsCards } from '../../data';
+import { globalData } from '../../data';
+
+const { products } = globalData;
+const { h2 } = products;
 
 export const Products = () => {
 	return (
-		<div className='Products'>
-			{products?.map(({ name, description, img }) => (
-				<div key={uuidv4()}>
-					<h3>{name}</h3>
-					<p>{description}</p>
-					<img src={img} alt='name' />
-				</div>
-			))}
+		<div className='Products' id='products'>
+			<h2>{h2}</h2>
+			<div className='Products-cards'>
+				{productsCards?.map(({ name, description, img }) => (
+					<div key={uuidv4()}>
+						<h3>{name}</h3>
+						<p>{description}</p>
+						<img src={img} alt={name} />
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };

@@ -1,26 +1,35 @@
+import './Header.scss';
 import { globalData } from '../../../data';
-
+import { useState } from 'react';
 const { header } = globalData;
-const { links, rrss } = header;
+import { Nav } from './nav/Nav';
+const { links, rrss, iconMenu, topHeader } = header;
+
+const { hours, location } = topHeader;
+const { open, close } = iconMenu;
 
 export const Header = () => {
+	const [menuActive, setMenuActive] = useState(false);
 	return (
-		<div className='Header'>
-			<ol>
-				{links?.map(({ id, name, href }) => (
-					<li key={id}>
-						<a href={href}>{name}</a>
-					</li>
-				))}
-			</ol>
-
-			<div className='Header-rrss'>
-				{rrss?.map(({ title, href, logo }) => (
-					<a aria-label={`Ir a ${title}`} href={href} key={title}>
-						<ion-icon name={`logo-${logo}`}></ion-icon>
-					</a>
-				))}
+		<header className='Header'>
+			<div>
+				<span>{hours}</span>
+				<span>{location}</span>
 			</div>
-		</div>
+			<button onClick={() => setMenuActive(!menuActive)}>
+				{menuActive ? (
+					<ion-icon name={close}></ion-icon>
+				) : (
+					<ion-icon name={open}></ion-icon>
+				)}
+			</button>
+
+			<Nav
+				closeMenu={() => setMenuActive(false)}
+				isActive={menuActive}
+				list={links}
+				rrss={rrss}
+			/>
+		</header>
 	);
 };

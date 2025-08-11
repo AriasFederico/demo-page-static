@@ -2,44 +2,5 @@
 @use '../../../../styles/mixins' as *;
 
 .Nav {
-    background-color: $primary-color;
-    max-height: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    ol {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    div {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        justify-content: center;
-
-        ion-icon {
-            width: 1.5rem;
-            height: 1.5rem;
-            color: $tertiary-color;
-        }
-    }
-
-
-    a {
-        color: white;
-    }
-    
-}
-    
- 
-
-.active {
-    max-height: 600px;
-    padding: 2rem 0;
-    transition: all .8s ease-out;
+   
 }
