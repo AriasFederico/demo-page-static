@@ -1,4 +1,5 @@
 @use '../styles/variables' as *;
+
 @mixin desktop() {
 	@media screen and (min-width: 1280px) {
 		@content;
@@ -6,14 +7,39 @@
 }
 
 @mixin tablet() {
-	@media screen and (min-width: 900px) {
+	@media screen and (min-width: 800px) {
 		@content;
 	}
 }
-
 
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin buttons {
+   background-color: $primary-color;
+   border: none;
+   padding: .7rem 2rem;
+   color: $secondary-color;
+   box-shadow: inset 0 0 0 0 $black;
+   transition: all ease .2s;
+   cursor: pointer;
+   
+   &:hover{
+       transition: box-shadow ease-in .5s;
+       box-shadow: inset 0 0 0 50px $black;
+   }
+}
+
+@mixin a-font($color:$secondary-color,$weight : 500){
+	font-family: "Roboto", sans-serif;
+	font-size: 1rem;
+	font-weight: $weight;
+	color: $color;
+}
+
+@mixin transitions {
+	transition: all .4s ease;
 }

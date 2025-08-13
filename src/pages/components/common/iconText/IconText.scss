@@ -1,0 +1,25 @@
+@use '../../../../styles/variables' as * ;
+
+.IconText {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    color: $white;
+
+    ion-icon {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    &--about {
+        ion-icon {
+            background-color: $primary-color;
+            padding: .4rem;
+            color: white;
+        }
+
+        span {
+            color: $black;
+        }
+    }
+}

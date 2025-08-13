@@ -10,11 +10,12 @@ export const Products = () => {
 		<div className='Products' id='products'>
 			<h2>{h2}</h2>
 			<div className='Products-cards'>
-				{productsCards?.map(({ name, description, img }) => (
+				{productsCards?.map(({ name, description, img, price }) => (
 					<div key={uuidv4()}>
 						<h3>{name}</h3>
 						<p>{description}</p>
 						<img src={img} alt={name} />
+						<span>{price}</span>
 					</div>
 				))}
 			</div>

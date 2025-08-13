@@ -1,6 +1,8 @@
+import bannerMain from '../../public/banner-main.jpg';
+
 export const shared = {
-	location: 'LOCATION: 55 MAIN STREET, NEW YORK',
-	hours: 'OPENING HOURS: 08:00 AM - 09:00 PM',
+	location: 'Location: 55 Main Street, New York',
+	hours: 'Sunday - thursday: 08:00 - 9:00',
 	logo: '',
 };
 
@@ -13,12 +15,20 @@ export const globalData = {
 			hours: hours,
 			location: location,
 		},
+
 		logo: logo,
+
+		button: {
+			text: 'Contact us',
+			href: '#', // agregar direccion de wsp
+		},
+
 		links: [
-			{ id: 1, name: 'HOME', href: '#home' },
-			{ id: 2, name: 'PRODUCTS', href: '#products' },
-			{ id: 3, name: 'ABOUT US', href: '#about' },
+			{ id: 1, name: 'Home', href: '#home' },
+			{ id: 2, name: 'Products', href: '#products' },
+			{ id: 3, name: 'About us', href: '#about' },
 		],
+
 		iconMenu: { open: 'menu-outline', close: 'close-outline' },
 	},
 
@@ -26,8 +36,9 @@ export const globalData = {
 
 	main: {
 		h1: 'Lorem ipsum dolor sit amet',
-		p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		btn: 'Button',
+		p: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+		btn: 'Go to Products',
+		img: bannerMain,
 	},
 
 	// PRODUCTS //////////////////////////////////////////////
@@ -47,9 +58,9 @@ export const globalData = {
 			h3: 'ABOUT US',
 		},
 		rrss: [
-			{ title: 'Instagram', href: '#', logo: 'instagram' },
-			{ title: 'Whatsapp', href: '#', logo: 'facebook' },
-			{ title: 'Facebook', href: '#', logo: 'whatsapp' },
+			{ title: 'Instagram', href: '#', logo: 'logo-instagram' },
+			{ title: 'Whatsapp', href: '#', logo: 'logo-facebook' },
+			{ title: 'Facebook', href: '#', logo: 'logo-whatsapp' },
 		],
 	},
 

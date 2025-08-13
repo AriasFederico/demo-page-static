@@ -1,0 +1,10 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.Button {
+    @include buttons();
+    align-self: flex-start;
+    &__a {
+        @include a-font();
+    }
+}

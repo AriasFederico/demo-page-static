@@ -1,15 +1,28 @@
 import './Home.scss';
 import { globalData } from '../../data';
-
+import { Button } from '../components/common/button/Button';
 const { main } = globalData;
-const { h1, p, btn } = main;
+const { btn, h1, img, p } = main;
 
 export const Home = () => {
 	return (
 		<div className='Home' id='home'>
-			<h1>{h1}</h1>
-			<p>{p}</p>
-			<button>{btn}</button>
+			<div
+				className='Home__content'
+				data-aos={'zoom-in'}
+				data-aos-duration={'1000'}
+			>
+				<h1 className='Home__h1'>{h1}</h1>
+				<p className='Home__p'>{p}</p>
+				<Button href={'#'} text={btn} />
+			</div>
+			<div
+				className='Home__media'
+				data-aos={'zoom-in'}
+				data-aos-duration={'1000'}
+			>
+				<img src={img} alt='' className='Home__banner' />
+			</div>
 		</div>
 	);
 };
