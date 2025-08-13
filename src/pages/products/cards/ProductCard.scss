@@ -1,0 +1,56 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.ProductCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+
+    @include desktop(){
+        flex-direction: row;
+
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        padding: 2rem 2.5rem;
+        gap: 1rem;
+        text-align: center;
+
+        @include desktop(){
+            text-align: start;
+            align-items: flex-start;
+        }
+    }
+
+    &__h3 {
+        font-size: 1.5rem;
+    }
+
+    &__p {
+        line-height: 1.7;
+    }
+
+    &__img {
+        width: 200px;
+        height: 200px;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    &__price {
+        align-self: center;
+        padding: .5rem 1rem;
+        color: $white;
+        background-color: $primary-color;
+        
+        @include desktop(){
+            align-self: flex-start;
+        }
+    }
+
+}

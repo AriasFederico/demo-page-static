@@ -3,6 +3,7 @@ import { globalData } from '../../data';
 import { Button } from '../components/common/button/Button';
 const { main } = globalData;
 const { btn, h1, img, p } = main;
+const { text, href } = btn;
 
 export const Home = () => {
 	return (
@@ -14,7 +15,7 @@ export const Home = () => {
 			>
 				<h1 className='Home__h1'>{h1}</h1>
 				<p className='Home__p'>{p}</p>
-				<Button href={'#'} text={btn} />
+				<Button href={href} text={text} />
 			</div>
 			<div
 				className='Home__media'

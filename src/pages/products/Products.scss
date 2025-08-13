@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.Products {
+    background-color: $tertiary-color;
+    padding: 3rem 0;
+    
+    &__container {
+        // border: 1px solid red;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10rem;
+        padding: 2rem;
+    }
+    
+    &__h2 {
+        font-size: $h2-desktop;
+    }
+
+    &__cards--container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet(){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            column-gap: 3rem;
+            row-gap: 5rem;
+        }
+    }
+
+}
