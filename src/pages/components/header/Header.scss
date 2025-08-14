@@ -6,7 +6,7 @@
     background-color: $black;
 
     @include desktop(){
-        background-color: $secondary-color;
+        background-color: $white;
     }
 
     &__topbar {
@@ -15,7 +15,7 @@
         @include tablet(){
             background-color: $primary-color;
             display: block;
-            padding: 1rem;        
+            padding: 1rem;
 
             &-container {
                 max-width: 1280px;
@@ -25,7 +25,12 @@
                 align-items: center;
     
             }
+
+        @include desktop(){
+        background-color: $black;
+        }
         }    
+
     }
 
     &__menu {
@@ -47,8 +52,8 @@
         cursor: pointer;
 
         ion-icon {
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 2rem;
+            height: 2rem;
         }
 
         @include desktop(){

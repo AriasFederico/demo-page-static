@@ -3,6 +3,11 @@
 
 .Products {
     background-color: $tertiary-color;
+    // background-color: red;
+    background-image: url('../../../public/background-products.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     padding: 3rem 0;
     
     &__container {

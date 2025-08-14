@@ -19,14 +19,14 @@ export const globalData = {
 		logo: logo,
 
 		button: {
-			text: 'Contact us',
+			text: 'CONTACT US',
 			href: '#products', // agregar direccion de wsp
 		},
 
 		links: [
-			{ id: 1, name: 'Home', href: '#home' },
-			{ id: 2, name: 'Products', href: '#products' },
-			{ id: 3, name: 'About us', href: '#about' },
+			{ id: 1, name: 'HOME', href: '#home' },
+			{ id: 2, name: 'PRODUCTS', href: '#products' },
+			{ id: 3, name: 'ABOUT US', href: '#about' },
 		],
 
 		iconMenu: { open: 'menu-outline', close: 'close-outline' },
@@ -38,7 +38,7 @@ export const globalData = {
 		h1: 'Lorem ipsum dolor sit amet',
 		p: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
 		btn: {
-			text: 'Go to Products',
+			text: 'PRODUCTS',
 			href: '#products',
 		},
 		img: bannerMain,
@@ -65,6 +65,10 @@ export const globalData = {
 			{ title: 'Whatsapp', href: '#', logo: 'logo-facebook' },
 			{ title: 'Facebook', href: '#', logo: 'logo-whatsapp' },
 		],
+		workinghours: {
+			title: 'Working ours',
+			hours: hours,
+		},
 	},
 
 	// FOOTER //////////////////////////////////////////////
