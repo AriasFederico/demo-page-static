@@ -15,10 +15,10 @@
         @include tablet(){
             background-color: $primary-color;
             display: block;
-            padding: 1rem;
+            padding: .5rem;
 
             &-container {
-                max-width: 1280px;
+                max-width: 1140px;
                 margin: 0 auto;
                 display: flex;        
                 justify-content: space-between;
@@ -26,9 +26,10 @@
     
             }
 
-        @include desktop(){
-        background-color: $black;
-        }
+            @include desktop(){
+                background-color: $primary-color;
+
+            }
         }    
 
     }
@@ -37,7 +38,7 @@
         padding: 1rem;
 
         &-container {
-            max-width: 1280px;
+            max-width: 1140px;
             margin: 0 auto;
             display: flex;
             align-items: center;

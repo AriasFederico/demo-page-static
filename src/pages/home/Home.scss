@@ -2,13 +2,13 @@
 @use '../../styles/mixins' as *;
 
 .Home {
-    background-color: $secondary-color;
-    background-image: url('../../../public/homeasd.png');
+    background-image: url('../../../public/bannerHome.webp');
     background-size: cover;
-    background-position: right;
+    background-position: bottom;
+    background-attachment:fixed;
 
     @include desktop(){
-        background-position: center;
+        // background-position: center;
     }
 
     &__container {
@@ -21,13 +21,14 @@
             // margin: 4rem auto;
             // height: 90vh;
             padding: 5rem 1rem 10rem;
+            max-width: 1140px;
         }
-    
+        
         @include desktop(){
-            height: 85vh;
+            height: 90vh;
             flex-direction: row;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 5rem;
             max-width: 1280px;
             gap: 1.5rem;
             align-items: center;
@@ -37,7 +38,7 @@
 
     &__h1 {
         font-size: $h1-tablet;
-        
+        color:$secondary-color;
         @include desktop(){
             font-size: $h1-desktop;
         }
@@ -46,7 +47,7 @@
 
     &__content, &__media {
         flex: 1;
-        min-width: 0;
+        // min-width: 80%;
     }
 
     &__content {
@@ -63,12 +64,13 @@
         object-position: center;
 
         @include desktop(){
-          max-height: 33rem;
+          max-height: 37rem;
         }
     }
 
     &__p {
         width: 90%;
         line-height: 1.7;
+        color:$secondary-color;
     }
 }
