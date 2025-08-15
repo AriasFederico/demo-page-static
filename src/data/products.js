@@ -3,7 +3,7 @@ export const productsCards = [
 	{
 		name: 'Lorem ipsum dolor',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt',
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ',
 		img: productImage,
 		price: '$ 1.520',
 	},
