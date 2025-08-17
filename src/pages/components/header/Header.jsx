@@ -2,6 +2,7 @@ import './Header.scss';
 import { globalData } from '../../../data';
 import { useState, useEffect } from 'react';
 import { Nav } from './nav/Nav';
+import { Logo } from '../common/logo/Logo';
 import { IconText } from '../common/iconText/IconText';
 
 const { header } = globalData;
@@ -38,7 +39,7 @@ export const Header = () => {
 
 			<div className='Header__menu'>
 				<div className='Header__menu-container'>
-					<img src={logo} alt='Marca' />
+					<Logo />
 					<button
 						onClick={() => setMenuActive(!menuActive)}
 						className='Header__burguer'

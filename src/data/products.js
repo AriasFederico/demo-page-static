@@ -1,4 +1,4 @@
-import productImage from '../../public/product-image.jpg';
+import productImage from '../../public/product-image.webp';
 export const productsCards = [
 	{
 		name: 'Lorem ipsum dolor',

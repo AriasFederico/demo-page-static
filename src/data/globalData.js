@@ -1,14 +1,20 @@
-import bannerMain from '../../public/banner-main.jpg';
+import AboutBanner from '../../public/banner-about.webp';
+import bannerMain from '../../public/banner-main.webp';
+import LogoPage from '../../public/Logo.webp';
 
 export const shared = {
 	location: 'Location: 55 Main Street, New York',
 	hours: 'Sunday - thursday: 08:00 - 9:00',
-	logo: '',
 };
 
-const { location, hours, logo } = shared;
+const { location, hours } = shared;
 
 export const globalData = {
+	logo: {
+		img: LogoPage,
+		name: 'Coffee Shop',
+		href: '',
+	},
 	// HEADER //////////////////////////////////////////////
 	header: {
 		topHeader: {
@@ -16,7 +22,7 @@ export const globalData = {
 			location: location,
 		},
 
-		logo: logo,
+		// LOGO
 
 		button: {
 			text: 'CONTACT US',
@@ -53,21 +59,30 @@ export const globalData = {
 	// ABOUT US //////////////////////////////////////////////
 
 	about: {
-		imageAbout: '',
-		logo: logo,
-		h3: 'Lorem ipsum dolor sit amet',
+		imageAbout: AboutBanner,
+		// LOGO
+		h3: 'ABOUT US',
 		p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
 		contactUs: {
-			h3: 'ABOUT US',
+			h4: 'CONTATC US',
 		},
 		rrss: [
-			{ title: 'Instagram', href: '#', logo: 'logo-instagram' },
+			{
+				title: 'Instagram',
+				href: 'https://www.instagram.com/code_fex.ok',
+				logo: 'logo-instagram',
+			},
 			{ title: 'Whatsapp', href: '#', logo: 'logo-facebook' },
-			{ title: 'Facebook', href: '#', logo: 'logo-whatsapp' },
+			{
+				title: 'Facebook',
+				href: 'https://www.facebook.com/?locale=es_LA',
+				logo: 'logo-whatsapp',
+			},
 		],
 		workinghours: {
-			title: 'Working ours',
+			title: 'VISIT US',
 			hours: hours,
+			location: location,
 		},
 	},
 

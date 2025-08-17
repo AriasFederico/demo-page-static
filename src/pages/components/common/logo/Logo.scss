@@ -1,0 +1,19 @@
+@use '../../../../styles/variables' as *;
+.Logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &__img {
+        width: 3.2rem;
+        height: 3.2rem;
+        padding-bottom: .3rem;
+    }
+
+    &__name {
+        font-weight: 800;
+        font-family: "Oswald",sans-serif;
+        font-size: 1.8rem;
+        color: $black;
+   }
+}

@@ -8,7 +8,6 @@
     background-attachment:fixed;
 
     @include desktop(){
-        // background-position: center;
     }
 
     &__container {
@@ -18,8 +17,6 @@
         gap: 6rem;
 
         @include tablet(){        
-            // margin: 4rem auto;
-            // height: 90vh;
             padding: 5rem 1rem 10rem;
             max-width: 1140px;
         }
@@ -42,12 +39,10 @@
         @include desktop(){
             font-size: $h1-desktop;
         }
-        // width: 80%;
     }
 
     &__content, &__media {
         flex: 1;
-        // min-width: 80%;
     }
 
     &__content {

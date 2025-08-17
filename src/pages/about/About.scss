@@ -1,0 +1,46 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.About {
+    height: 100vh;
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 1280px;
+        
+        
+        @include desktop(){
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+    }
+
+    &__media, &__content {
+        flex: 1;
+    }
+
+    &__h3 {
+        font-size: $h3-desktop
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 600px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
