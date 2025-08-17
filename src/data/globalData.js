@@ -7,90 +7,91 @@ export const shared = {
 	hours: 'Sunday - thursday: 08:00 - 9:00',
 };
 
-const { location, hours } = shared;
-
 export const globalData = {
+	// LOGO SECTION
 	logo: {
-		img: LogoPage,
-		name: 'Coffee Shop',
-		href: '',
+		image: LogoPage,
+		altText: 'Coffee Shop',
+		url: '#',
 	},
-	// HEADER //////////////////////////////////////////////
+
+	// HEADER SECTION
 	header: {
-		topHeader: {
-			hours: hours,
-			location: location,
+		topBar: {
+			openingHours: shared.hours,
+			adress: shared.location,
 		},
-
-		// LOGO
-
-		button: {
+		ctaButton: {
 			text: 'CONTACT US',
-			href: '#products', // agregar direccion de wsp
+			url: '#products', // agregar direccion de wsp
 		},
-
-		links: [
-			{ id: 1, name: 'HOME', href: '#home' },
-			{ id: 2, name: 'PRODUCTS', href: '#products' },
-			{ id: 3, name: 'ABOUT US', href: '#about' },
+		navigationLinks: [
+			{ id: 1, label: 'HOME', url: '#home' },
+			{ id: 2, label: 'PRODUCTS', url: '#products' },
+			{ id: 3, label: 'ABOUT US', url: '#about' },
 		],
 
-		iconMenu: { open: 'menu-outline', close: 'close-outline' },
+		menuIcons: { open: 'menu-outline', close: 'close-outline' },
 	},
 
-	// MAIN //////////////////////////////////////////////
+	// HERO SECTION
 
-	main: {
-		h1: 'Lorem ipsum dolor sit amet',
-		p: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-		btn: {
+	hero: {
+		title: 'Lorem ipsum dolor sit amet',
+		description:
+			'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
+		ctaButton: {
 			text: 'PRODUCTS',
-			href: '#products',
+			url: '#products',
 		},
-		img: bannerMain,
+		image: bannerMain,
 	},
 
-	// PRODUCTS //////////////////////////////////////////////
+	// PRODUCTS SECTION
 
 	products: {
-		h2: 'OUR PRODUCTS',
+		sectionTitle: 'OUR PRODUCTS',
 	},
 
 	// ABOUT US //////////////////////////////////////////////
 
 	about: {
-		imageAbout: AboutBanner,
-		// LOGO
-		h3: 'ABOUT US',
-		p: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
-		contactUs: {
-			h4: 'CONTATC US',
+		image: AboutBanner,
+		sectionTitle: 'ABOUT US',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+		contact: {
+			title: 'CONTATC US',
+			socialMedia: [
+				{
+					platform: 'Instagram',
+					url: 'https://www.instagram.com/code_fex.ok',
+					icon: 'logo-instagram',
+				},
+				{ platform: 'Whatsapp', url: '#', icon: 'logo-whatsapp' },
+				{
+					platform: 'Facebook',
+					url: 'https://www.facebook.com/?locale=es_LA',
+					icon: 'logo-facebook',
+				},
+			],
 		},
-		rrss: [
-			{
-				title: 'Instagram',
-				href: 'https://www.instagram.com/code_fex.ok',
-				logo: 'logo-instagram',
-			},
-			{ title: 'Whatsapp', href: '#', logo: 'logo-facebook' },
-			{
-				title: 'Facebook',
-				href: 'https://www.facebook.com/?locale=es_LA',
-				logo: 'logo-whatsapp',
-			},
-		],
-		workinghours: {
+		businessInfo: {
 			title: 'VISIT US',
-			hours: hours,
-			location: location,
+			openingHours: shared.hours,
+			adress: shared.location,
 		},
 	},
 
 	// FOOTER //////////////////////////////////////////////
 
 	footer: {
-		p: 'Sitio web creado por CODEFEX',
-		href: '#',
-		location: location,
+		copyightText: 'Sitio web creado por CODEFEX',
+		creditUrl: '#',
+
+		imageCredits: [
+			{ text: 'Imágenes por Unplash', url: '', target: '' },
+			{ text: 'Íconos por Ionicons', url: '', target: '' },
+		],
 	},
 };

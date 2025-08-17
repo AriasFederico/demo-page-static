@@ -1,8 +1,8 @@
 import { globalData } from '../../../data';
 
 const { footer } = globalData;
-const { p, href } = footer;
+const { copyightText, creditUrl, imageCredits } = footer;
 
 export const Footer = () => {
-	return <div className='Footer'>{/* <a href={href}>{p}</a> */}</div>;
+	return <div className='Footer'></div>;
 };

@@ -1,12 +1,20 @@
 import './VisitUs.scss';
 import { IconText } from '../../components/common/iconText/IconText';
-export const VisitUs = ({ title, hours, location }) => {
+export const VisitUs = ({ businessInfo }) => {
 	return (
 		<div className='VisitUs'>
-			<h4>{title}</h4>
+			<h3>{businessInfo.title}</h3>
 			<div className='VisitUs__visit'>
-				<IconText icon={'time-outline'} text={hours} variant={'about'} />
-				<IconText icon={'location-outline'} text={location} variant={'about'} />
+				<IconText
+					icon={'time-outline'}
+					text={businessInfo.openingHours}
+					variant={'about'}
+				/>
+				<IconText
+					icon={'location-outline'}
+					text={businessInfo.adress}
+					variant={'about'}
+				/>
 			</div>
 		</div>
 	);

@@ -28,10 +28,10 @@
            flex-direction: column;
            gap: 2rem;
            background-color: $tertiary-color;
-           top: 3.6rem;
+           top: 5.2rem;
            transition: max-height 1s ease;
            @include tablet(){
-               top: 6.9rem;
+               top: 7rem;
            }
         }
 

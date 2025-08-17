@@ -6,11 +6,11 @@ import { Logo } from '../common/logo/Logo';
 import { IconText } from '../common/iconText/IconText';
 
 const { header } = globalData;
-const { logo, links, rrss, iconMenu, topHeader, button } = header;
-const { text, href } = button;
+const { navigationLinks, menuIcons, topBar, ctaButton } = header;
 
-const { hours, location } = topHeader;
-const { open, close } = iconMenu;
+const { open, close } = menuIcons;
+const { openingHours, adress } = topBar;
+const { text, url } = ctaButton;
 
 export const Header = () => {
 	const [menuActive, setMenuActive] = useState(false);
@@ -32,8 +32,8 @@ export const Header = () => {
 		<header className='Header'>
 			<div className='Header__topbar'>
 				<div className='Header__topbar-container'>
-					<IconText icon={'time-outline'} text={hours} />
-					<IconText icon={'location-outline'} text={location} />
+					<IconText icon={'time-outline'} text={openingHours} />
+					<IconText icon={'location-outline'} text={adress} />
 				</div>
 			</div>
 
@@ -51,12 +51,11 @@ export const Header = () => {
 						)}
 					</button>
 					<Nav
-						closeMenu={() => setMenuActive(false)}
-						isMobileActive={menuActive}
-						list={links}
-						rrss={rrss}
-						button={text}
-						href={href}
+						onCloseMenu={() => setMenuActive(false)}
+						isMenuOpen={menuActive}
+						navigationLinks={navigationLinks}
+						ctaButtonText={text}
+						ctaButtonHref={url}
 					/>
 				</div>
 			</div>

@@ -1,9 +1,13 @@
 import './ProductCard.scss';
-export const ProductCard = ({ name, description, img, price }) => {
+export const ProductCard = ({ name, description, image, price }) => {
 	return (
-		<div className='ProductCard'>
+		<div
+			className='ProductCard'
+			data-aos={'zoom-in'}
+			data-aos-duration={'1000'}
+		>
 			<div className='ProductCard__media'>
-				<img src={img} alt={name} className='ProductCard__img' />
+				<img src={image} alt={name} className='ProductCard__img' />
 			</div>
 
 			<div className='ProductCard__container'>

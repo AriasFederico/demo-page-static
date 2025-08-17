@@ -5,23 +5,24 @@ import { SocialMediaSection } from './socialMediaSection/SocialMediaSection';
 import './About.scss';
 
 const { about } = globalData;
-const { imageAbout, logo, h3, p, contactUs, rrss, workinghours } = about;
-
-const { h4 } = contactUs;
-const { title, hours, location } = workinghours;
+const { image, sectionTitle, description, contact, businessInfo } = about;
 
 export const About = () => {
 	return (
 		<div className='About' id='about'>
-			<h3 className='About__h3'>{h3}</h3>
-			<div className='About__container'>
+			<h2 className='About__h2'>{sectionTitle}</h2>
+			<div
+				className='About__container'
+				data-aos={'zoom-in'}
+				data-aos-duration={'1000'}
+			>
 				<div className='About__media'>
-					<img src={imageAbout} alt='h3' className='About__img' />
+					<img src={image} alt={sectionTitle} className='About__img' />
 				</div>
 				<div className='About__content'>
-					<BrandIntro paragraph={p} logo={logo} />
-					<SocialMediaSection rrss={rrss} title={h4} />
-					<VisitUs title={title} hours={hours} location={location} />
+					<BrandIntro description={description} />
+					<SocialMediaSection contact={contact} />
+					<VisitUs businessInfo={businessInfo} />
 				</div>
 			</div>
 		</div>

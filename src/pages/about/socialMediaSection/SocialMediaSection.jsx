@@ -1,17 +1,17 @@
 import { IconText } from '../../components/common/iconText/IconText';
 import './SocialMediaSection.scss';
-export const SocialMediaSection = ({ rrss, title }) => {
+export const SocialMediaSection = ({ contact }) => {
 	return (
 		<div className='SocialMediaSection'>
-			<h4>{title}</h4>
+			<h3>{contact.title}</h3>
 			<div className='SocialMediaSection__rrss'>
-				{rrss?.map(({ title, href, logo }) => (
+				{contact.socialMedia?.map(({ platform, url, icon }) => (
 					<IconText
-						key={title}
-						icon={logo}
-						text={title}
+						key={platform}
+						icon={icon}
+						text={platform}
 						variant={'about'}
-						href={href}
+						href={url}
 					/>
 				))}
 			</div>

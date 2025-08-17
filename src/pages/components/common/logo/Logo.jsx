@@ -1,14 +1,19 @@
 import './Logo.scss';
 import { globalData } from '../../../../data/globalData';
 const { logo } = globalData;
-const { img, name, href } = logo;
+const { image, altText, url } = logo;
 export const Logo = () => {
 	return (
-		<a href={href} className='Logo'>
+		<a href={url} className='Logo'>
 			{logo && (
-				<img src={img} title={name} aria-label={name} className='Logo__img' />
+				<img
+					src={image}
+					title={altText}
+					aria-label={altText}
+					className='Logo__img'
+				/>
 			)}
-			{name && <span className='Logo__name'>{name}</span>}
+			{altText && <span className='Logo__name'>{altText}</span>}
 		</a>
 	);
 };

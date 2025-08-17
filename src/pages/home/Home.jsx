@@ -1,9 +1,10 @@
 import './Home.scss';
 import { globalData } from '../../data';
 import { Button } from '../components/common/button/Button';
-const { main } = globalData;
-const { btn, h1, img, p } = main;
-const { text, href } = btn;
+
+const { hero } = globalData;
+const { title, description, ctaButton, image } = hero;
+const { text, url } = ctaButton;
 
 export const Home = () => {
 	return (
@@ -14,16 +15,16 @@ export const Home = () => {
 					data-aos={'zoom-in'}
 					data-aos-duration={'1000'}
 				>
-					<h1 className='Home__h1'>{h1}</h1>
-					<p className='Home__p'>{p}</p>
-					<Button href={href} text={text} />
+					<h1 className='Home__h1'>{title}</h1>
+					<p className='Home__p'>{description}</p>
+					<Button href={url} text={text} />
 				</div>
 				<div
 					className='Home__media'
 					data-aos={'zoom-in'}
 					data-aos-duration={'1000'}
 				>
-					<img src={img} alt='' className='Home__banner' />
+					<img src={image} alt={title} className='Home__banner' />
 				</div>
 			</div>
 		</div>

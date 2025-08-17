@@ -1,18 +1,28 @@
 import './Nav.scss';
 import { Button } from '../../common/button/Button';
-export const Nav = ({ list, closeMenu, isMobileActive, button, href }) => {
+export const Nav = ({
+	navigationLinks,
+	onCloseMenu,
+	isMenuOpen,
+	ctaButtonText,
+	ctaButtonHref,
+}) => {
 	return (
-		<nav className={`Nav ${isMobileActive ? 'Nav--mobile-active' : ''}`}>
+		<nav className={`Nav ${isMenuOpen ? 'Nav--mobile-active' : ''}`}>
 			<ol className='Nav__ol Nav__mobile-ol'>
-				{list?.map(({ id, name, href }) => (
+				{navigationLinks?.map(({ id, label, url }) => (
 					<li key={id} className='Nav__li Nav__mobile-li'>
-						<a href={href} onClick={closeMenu} className='Nav__a Nav__mobile-a'>
-							{name}
+						<a
+							href={url}
+							onClick={onCloseMenu}
+							className='Nav__a Nav__mobile-a'
+						>
+							{label}
 						</a>
 					</li>
 				))}
 			</ol>
-			<Button text={button} href={href} />
+			<Button text={ctaButtonText} href={ctaButtonHref} />
 		</nav>
 	);
 };
