@@ -89,9 +89,19 @@ export const globalData = {
 		copyightText: 'Sitio web creado por CODEFEX',
 		creditUrl: '#',
 
+		gmail: 'coffee-shop@contact.com',
+
 		imageCredits: [
-			{ text: 'Imágenes por Unplash', url: '', target: '' },
-			{ text: 'Íconos por Ionicons', url: '', target: '' },
+			{
+				text: 'Imágenes por Unplash',
+				url: 'https://unsplash.com/es',
+				target: '_blank',
+			},
+			{
+				text: 'Íconos por Ionicons',
+				url: 'https://ionic.io/ionicons',
+				target: '_blank',
+			},
 		],
 	},
 };

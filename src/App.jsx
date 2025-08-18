@@ -19,8 +19,8 @@ export const App = () => {
 				<Home />
 				<Products />
 				<About />
-				<Footer />
 			</main>
+			<Footer />
 		</div>
 	);
 };
